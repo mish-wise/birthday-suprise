@@ -440,4 +440,48 @@ footer {
         font-size: 16px;
     }
 
+}#birthday-lock {
+position: fixed;
+inset: 0;
+width: 100%;
+height: 100%;
+min-height: 100vh;
+background: linear-gradient(135deg, #071a40, #123e7a, #071a40);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 999999;
+padding: 20px;
+box-sizing: border-box;
 }
+
+.countdown-content {
+width: 100%;
+max-width: 600px;
+}
+
+.countdown-content h1 {
+font-size: 70px;
+margin: 0 0 20px;
+}
+
+.countdown-content h2 {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+#countdown {
+font-size: clamp(24px, 6vw, 42px);
+font-weight: bold;
+margin: 30px 0;
+line-height: 1.6;
+}
+
+.love-message {
+font-size: 16px;
+opacity: 0.9;
+}
+
+
