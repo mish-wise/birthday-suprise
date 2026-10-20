@@ -54,3 +54,26 @@ function createParticle() {
 
 
 setInterval(createParticle, 500);
+
+const birthdayDate = new Date("2026-12-30T00:00:00+03:00").getTime();
+
+const birthdayTimer = setInterval(function () {
+    const now = Date.now();
+    const distance = birthdayDate - now;
+    const lock = document.getElementById("birthday-lock");
+    const countdown = document.getElementById("countdown");
+
+    if (distance <= 0) {
+        lock.style.display = "none";
+        clearInterval(birthdayTimer);
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    countdown.textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}, 1000);
